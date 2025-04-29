@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
 setTimeout(() => {
   const hasRefreshed = localStorage.getItem("hasRefreshed");
 
-  if (!document.querySelector(".project-card")) {
+  if (!document.querySelector("#bay")) {
     if (!hasRefreshed) {
       console.warn("No project cards found — refreshing once.");
       localStorage.setItem("hasRefreshed", "true");
@@ -55,4 +55,4 @@ setTimeout(() => {
   } else {
     localStorage.removeItem("hasRefreshed"); // reset if everything is fine
   }
-}, 1500);
+}, 500);
