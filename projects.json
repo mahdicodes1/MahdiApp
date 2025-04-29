@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "title": "Accounting Application",
+      "jpg": "./images/Accounting.jpg",
+      "avif": "./images/Accounting.avif",
+      "webp": "./images/Accounting.webp",
+      "text": "<ul><li>Set profit margins at the point of sale</li><li>Manage debt and receivables schedules</li><li>Generate daily, monthly, and yearly sales reports</li><li>Produce detailed cash flow reports</li><li>Define unlimited warehouse item entries</li><li>Transfer items between warehouses with reporting capabilities</li><li>Conduct warehouse inventory counts with reports</li><li>Set product expiration dates</li><li>Assign item locations for faster access</li><li>Manage users with role-based permissions and activity logs</li><li>Generate comprehensive profit, loss, and balance sheet reports</li><li>Set minimum stock levels, with alerts for low inventory in reports</li><li>...</li></ul>",
+      "buttons": [
+        {
+          "label": "",
+          "href": "",
+          "aria": "",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "title": "Warehouse Management Application",
+      "jpg": "./images/WarehouseManagement.jpg",
+      "avif": "./images/WarehouseManagement.avif",
+      "webp": "./images/WarehouseManagement.webp",
+      "text": "<ul><li>Define an unlimited number of items</li><li>Create unlimited sections or departments</li><li>Track incoming and outgoing transactions</li><li>Transfer items between sections</li><li>Manage user accounts and permissions</li><li>Carry over warehouse balances to the next fiscal year</li><li>Organize and categorize items efficiently</li><li>Generate item reports by category or type</li><li>Generate item reports by section</li><li>Produce comparison reports</li><li>Generate annual reports</li><li>...</li></ul>"
+,
+      "buttons": [
+        {
+          "label": "",
+          "href": "",
+          "aria": "",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "title": "Bank Cheque Management Application",
+      "jpg": "./images/BankCheque.jpg",
+      "avif": "./images/BankCheque.avif",
+      "webp": "./images/BankCheque.webp",
+      "text": "<ul><li>Automatic conversion of cheque date and amount to words</li><li>Preview before printing</li><li>Save issued cheques</li><li>Define banks</li><li>Reporting capability</li><li>Define persons/contacts</li><li>Reports on all issued cheques</li><li>Display the number and total amount of cheques</li><li>Reprint cheques and payment receipts</li><li>Backup and restore saved data</li><li>Search and reuse accounts previously issued cheques for</li><li>...</li></ul>"
+,
+      "buttons": [
+        {
+          "label": "",
+          "href": "",
+          "aria": "",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "title": "<a href=\"https://www.pzishkan.com/\" target=\"_blank\">Clinic Management System</a>",
+      "jpg": "./images/pzishkan.jpg",
+      "avif": "./images/pzishkan.avif",
+      "webp": "./images/pzishkan.webp",
+      "text": "<ul><li>Recording visitor information (name, age, gender, and mobile number) along with visit date, notification, and scheduled visit time by the secretary.</li><li>Transferring visitors from the secretary to the doctor, with automatic notifications sent to the doctor.</li><li>Completing visits by the doctor, with automatic notifications sent to the secretary.</li><li>Generating visitor reports by day, month, and year, including total visit duration categorized by doctor type.</li><li>Searching for visitors by name or mobile number.</li><li>Saving visitor records to allow automatic retrieval during future visits, eliminating the need for re-entry by the secretary.</li><li>Assigning secretary names by the doctor.</li><li>Displaying the doctor's name on the website's home page.</li></ul>"
+
+,
+      "buttons": [
+        {
+          "label": "",
+          "href": "",
+          "aria": "",
+          "icon": ""
+        }
+      ]
+    }
+  ]
+}
