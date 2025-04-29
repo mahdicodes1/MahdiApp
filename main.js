@@ -38,3 +38,43 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+window.addEventListener("DOMContentLoaded", async () => {
+  const projectsContainer = document.getElementById("projects");
+
+  try {
+    const response = await fetch("projects.json");
+    const projects = await response.json();
+
+    if (!Array.isArray(projects) || projects.length === 0) {
+      throw new Error("No projects loaded");
+    }
+
+    projects.forEach((project) => {
+      const div = document.createElement("div");
+      div.className = "project-card";
+      div.innerHTML = `
+        <h2>${project.name}</h2>
+        <img src="${project.image}" alt="${project.name}" class="project-image" />
+      `;
+      projectsContainer.appendChild(div);
+    });
+
+    document.querySelectorAll(".project-image").forEach((img) => {
+      img.addEventListener("click", () => openModal(img.src));
+    });
+
+    // 🔍 Check if a key element is missing after delay
+    setTimeout(() => {
+      if (!document.querySelector(".project-card")) {
+        console.warn("Project cards missing — refreshing the page.");
+        location.reload();
+      }
+    }, 1000);
+  } catch (error) {
+    console.error("Error loading projects:", error);
+    // Optional: show user-friendly message or auto-refresh
+    setTimeout(() => location.reload(), 1500);
+  }
+});
+
