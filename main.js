@@ -7,22 +7,21 @@ import modal from "./script/modal.mjs";
 bay();
 bay.create("bay-modal", modal, ["open"]);
 
-window.addEventListener("DOMContentLoaded", async () => {
-  const shadowHost = document.querySelector("bay-component");
-  if (shadowHost && shadowHost.shadowRoot) {
-    // Load Font Awesome CSS
-    const response = await fetch(
-      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    );
-    const fontAwesomeCSS = await response.text();
-
-    // Create a <style> tag inside Shadow DOM
-    const styleElem = document.createElement("style");
-    styleElem.textContent = fontAwesomeCSS;
-
-    shadowHost.shadowRoot.prepend(styleElem);
-  }
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(async () => {
+    const shadowHost = document.querySelector("bay-component");
+    if (shadowHost && shadowHost.shadowRoot) {
+      const response = await fetch(
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      );
+      const fontAwesomeCSS = await response.text();
+      const styleElem = document.createElement("style");
+      styleElem.textContent = fontAwesomeCSS;
+      shadowHost.shadowRoot.prepend(styleElem);
+    }
+  }, 500); // Delay 500ms
 });
+
 
 window.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".project-img");
