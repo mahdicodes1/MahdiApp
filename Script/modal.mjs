@@ -13,7 +13,7 @@ export default /*HTML*/`
       <slot></slot>
     </div>
   </div>
-</div>
+</div> 
 
 <script>
   this.background_style = () => {
