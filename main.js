@@ -55,4 +55,4 @@ setTimeout(() => {
   } else {
     localStorage.removeItem("hasRefreshed"); // reset if everything is fine
   }
-}, 3000);
+}, 1500);
