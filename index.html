@@ -413,6 +413,21 @@
             margin: auto;
             color: #fff;
           }
+          .footer-social {
+            display: flex;
+            justify-content: end;
+            gap: 1.5rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+          }
+          @media screen and (max-width: 560px) {
+            .footer-inner {
+              grid-template-columns: 1fr;
+            }
+            .footer-social {
+              justify-content: start;
+            }
+          }
           .footer-contact {
             display: grid;
             gap: 10px;
@@ -425,13 +440,6 @@
             color: #fff;
           }
 
-          .footer-social {
-            display: flex;
-            justify-content: end;
-            gap: 1.5rem;
-            padding: 1rem;
-            font-size: 1.5rem;
-          }
           #phone {
             display: flex;
             gap: 7px;
