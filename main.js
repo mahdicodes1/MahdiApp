@@ -22,7 +22,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 500); // Delay 500ms
 });
 
-
 window.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".project-img");
 
@@ -39,42 +38,21 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-window.addEventListener("DOMContentLoaded", async () => {
-  const projectsContainer = document.getElementById("projects");
+setTimeout(() => {
+  const hasRefreshed = localStorage.getItem("hasRefreshed");
 
-  try {
-    const response = await fetch("projects.json");
-    const projects = await response.json();
-
-    if (!Array.isArray(projects) || projects.length === 0) {
-      throw new Error("No projects loaded");
+  if (!document.querySelector(".project-card")) {
+    if (!hasRefreshed) {
+      console.warn("No project cards found — refreshing once.");
+      localStorage.setItem("hasRefreshed", "true");
+      location.reload();
+    } else {
+      console.error(
+        "Still no project cards after refresh. Not refreshing again."
+      );
+      localStorage.removeItem("hasRefreshed");
     }
-
-    projects.forEach((project) => {
-      const div = document.createElement("div");
-      div.className = "project-card";
-      div.innerHTML = `
-        <h2>${project.name}</h2>
-        <img src="${project.image}" alt="${project.name}" class="project-image" />
-      `;
-      projectsContainer.appendChild(div);
-    });
-
-    document.querySelectorAll(".project-image").forEach((img) => {
-      img.addEventListener("click", () => openModal(img.src));
-    });
-
-    // 🔍 Check if a key element is missing after delay
-    setTimeout(() => {
-      if (!document.querySelector(".project-card")) {
-        console.warn("Project cards missing — refreshing the page.");
-        location.reload();
-      }
-    }, 1000);
-  } catch (error) {
-    console.error("Error loading projects:", error);
-    // Optional: show user-friendly message or auto-refresh
-    setTimeout(() => location.reload(), 1500);
+  } else {
+    localStorage.removeItem("hasRefreshed"); // reset if everything is fine
   }
-});
-
+}, 3000);
