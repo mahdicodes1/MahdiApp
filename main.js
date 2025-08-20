@@ -38,21 +38,21 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-setTimeout(() => {
-  const hasRefreshed = localStorage.getItem("hasRefreshed");
+// setTimeout(() => {
+//   const hasRefreshed = localStorage.getItem("hasRefreshed");
 
-  if (!document.querySelector("#bay")) {
-    if (!hasRefreshed) {
-      console.warn("No project cards found — refreshing once.");
-      localStorage.setItem("hasRefreshed", "true");
-      location.reload();
-    } else {
-      console.error(
-        "Still no project cards after refresh. Not refreshing again."
-      );
-      localStorage.removeItem("hasRefreshed");
-    }
-  } else {
-    localStorage.removeItem("hasRefreshed"); // reset if everything is fine
-  }
-}, 500);
+//   if (!document.querySelector("#bay")) {
+//     if (!hasRefreshed) {
+//       console.warn("No project cards found — refreshing once.");
+//       localStorage.setItem("hasRefreshed", "true");
+//       location.reload();
+//     } else {
+//       console.error(
+//         "Still no project cards after refresh. Not refreshing again."
+//       );
+//       localStorage.removeItem("hasRefreshed");
+//     }
+//   } else {
+//     localStorage.removeItem("hasRefreshed"); // reset if everything is fine
+//   }
+// }, 500);
